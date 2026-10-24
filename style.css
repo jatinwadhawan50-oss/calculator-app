@@ -1,49 +1,77 @@
 
+* {
+    box-sizing: border-box;
+}
+
 body {
-    background: #141414;
-    color: white;
-    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    min-height: 100vh;
+    margin: 0;
     text-align: center;
-    padding-top: 60px;
+    padding-top: 80px;
+    font-family: Arial, sans-serif;
+    color: white;
 }
 
 h1 {
-    color: #ffffff;
+    font-size: 30px;
     margin-bottom: 30px;
 }
 
 #display {
-    width: 260px;
-    height: 60px;
-    font-size: 28px;
-    text-align: right;
-    padding: 10px;
-    border: none;
-    border-radius: 10px;
-    background: #333;
+    width: 296px;
+    height: 75px;
+    background: #171717;
     color: white;
-    margin-bottom: 15px;
-    box-sizing: border-box;
+    font-size: 32px;
+    text-align: right;
+    border: 2px solid #444;
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 20px;
 }
 
 button {
     width: 65px;
-    height: 60px;
+    height: 65px;
     margin: 3px;
-    border: none;
-    border-radius: 12px;
-    background: #444;
+    background: #292929;
     color: white;
-    font-size: 22px;
+    border: none;
+    border-radius: 18px;
+    font-size: 23px;
+    font-weight: bold;
     cursor: pointer;
     transition: 0.2s;
 }
 
 button:hover {
-    background: #666;
-    transform: scale(1.05);
+    background: #ff9500;
+    transform: translateY(-3px);
 }
 
 button:active {
-    background: orange;
+    transform: scale(0.94);
+}
+
+button:nth-of-type(4n+2),
+button:nth-of-type(4n+3) {
+    color: #ff9500;
+}
+
+/* Calculator Button Alignment */
+
+button {
+    display: inline-block;
+    width: 65px;
+    height: 60px;
+    margin: 3px;
+    vertical-align: middle;
+}
+
+/* Keep calculator buttons in rows */
+br {
+    display: block;
+    content: "";
+    margin-bottom: 5px;
 }
